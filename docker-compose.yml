@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: vehicle-rental-postgres
+    environment:
+      POSTGRES_DB: vehicle_rental_db
+      POSTGRES_USER: vehicle_rental_user
+      POSTGRES_PASSWORD: vehicle_rental_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

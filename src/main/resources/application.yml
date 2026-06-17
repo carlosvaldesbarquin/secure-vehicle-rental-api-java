@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: secure-vehicle-rental-api-java
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/vehicle_rental_db
+    username: vehicle_rental_user
+    password: vehicle_rental_password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
